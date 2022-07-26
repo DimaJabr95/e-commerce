@@ -5,10 +5,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import "./style.css"
 import 'font-awesome/css/font-awesome.min.css';
+import Categories from './categories';
 
 
 
-const NavbarHeader = () => {
+const NavbarHeader = (props) => {
     return(
         <>
      <nav class="navbar">
@@ -22,42 +23,10 @@ const NavbarHeader = () => {
             <h1 class="logo" style={{color: "#fd7e14"}}>Dealerz.</h1>
         </div>
 
-        <div class="navbar-container container">
-            
-            <ul class="menu-items" style= {{marginLeft: "-130px"}}>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Promo</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li class="ml-auto">
-                <form className="d-flex">
-                  <input
-                    type="search"
-                    placeholder="Search"
-                    className="searchStyle"
-                    aria-label="Search What you need"
-                  />
-						
-					</form>
-				</li>
-                <li class="nav-item pl-1">
-						<a class="nav-link" href="#"><i class="icon-gittip"></i></a>
-				</li>
-                <li class="nav-item pl-1">
-						<a class="nav-link" href="#"><i class="icon-shopping-cart"></i></a>
-				</li>
-                <li class="nav-item pl-1">
-						<a class="nav-link" href="#"><i class="icon-user"></i></a>
-				</li>
-                <li class="nav-item pl-1">
-						<a class="nav-link" href="#"><i class="icon-bell"></i></a>
-				</li>
-
-            </ul>
-         
         
-        </div>
-
+        <Categories test = {props.test}/>
+        
+       
       
     </nav>
 
